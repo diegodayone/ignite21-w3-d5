@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strive School - Ignite Week 3 - Day 5</title>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app-container">
+        <div id="main">
+            <div id="menu">
+                <img src="logo.png" alt="spotify logo" />
+                <div id="search">
+                <input type="text" placeholder="search..." id="search-text" />
+                <input type="button" onclick="searchSong()" value="Search" />
+                </div>
+            </div>
+            <div id="songs">
+            </div>
+        </div>
+        <div id="player">
+            This will be our player!
+        </div>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="index.js"></script>
+    <script>
+        window.onload = async () => {
+            await renderSongs("linkin park")
+            await renderSongs("lady gaga")
+            await renderSongs("muse")
+            loadMenu()
+        }
+    </script>
+</body>
+</html>
